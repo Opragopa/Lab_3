@@ -10,6 +10,8 @@
 
 int sorting(int* array, int size); // прототип функции;
 
+//test fro pull req
+
 int main()
 	{
 		//1) Константный массив
