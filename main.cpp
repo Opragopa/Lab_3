@@ -1,18 +1,18 @@
 #include<iostream>
 #include<ctime>
 #include<fstream>
-//#include<string> // используется в строчке 67
+//#include<string> // РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ СЃС‚СЂРѕС‡РєРµ 67
 
-#pragma warning(disable : 4996) // Чтобы функция freopen не выдавала ошибку
+#pragma warning(disable : 4996) // Р§С‚РѕР±С‹ С„СѓРЅРєС†РёСЏ freopen РЅРµ РІС‹РґР°РІР°Р»Р° РѕС€РёР±РєСѓ
 
-//В массиве целых чисел найти число упорядоченных 
-//троек, тройка элементов упорядочена, если a[i] > a[i + 1] > a[i + 2]
+//Р’ РјР°СЃСЃРёРІРµ С†РµР»С‹С… С‡РёСЃРµР» РЅР°Р№С‚Рё С‡РёСЃР»Рѕ СѓРїРѕСЂСЏРґРѕС‡РµРЅРЅС‹С… 
+//С‚СЂРѕРµРє, С‚СЂРѕР№РєР° СЌР»РµРјРµРЅС‚РѕРІ СѓРїРѕСЂСЏРґРѕС‡РµРЅР°, РµСЃР»Рё a[i] > a[i + 1] > a[i + 2]
 
-int sorting(int* array, int size); // прототип функции;
+int sorting(int* array, int size); // РїСЂРѕС‚РѕС‚РёРї С„СѓРЅРєС†РёРё;
 
 int main()
 	{
-		//1) Константный массив
+		//1) РљРѕРЅСЃС‚Р°РЅС‚РЅС‹Р№ РјР°СЃСЃРёРІ
 		const int sizeOfConst = 10;
 		int constArray[sizeOfConst] = { 6,5,4,3,6,7,4,10,13,17 };
 		std::cout << "Size of constArray = " << sizeOfConst << std::endl;
@@ -25,7 +25,7 @@ int main()
 
 		std::cout << "\n";
 
-		//2) Динамический массив
+		//2) Р”РёРЅР°РјРёС‡РµСЃРєРёР№ РјР°СЃСЃРёРІ
 		srand(time(nullptr));
 		int sizeOfDynamic;
 		std::cout << "Size of dynamicArray = ";
@@ -42,7 +42,7 @@ int main()
 
 		std::cout << "\n";
 
-		//3) Чтение массива из файла
+		//3) Р§С‚РµРЅРёРµ РјР°СЃСЃРёРІР° РёР· С„Р°Р№Р»Р°
 		freopen("Array.txt", "r", stdin);
 		int sizeOfFileArray;
 		while (std::cin >> sizeOfFileArray) 
@@ -61,7 +61,7 @@ int main()
 		return -1;
 	}
 
-int sorting(int* array, int size)		//количество "троек"
+int sorting(int* array, int size)		//РєРѕР»РёС‡РµСЃС‚РІРѕ "С‚СЂРѕРµРє"
 {
 	int count = 0;
 	for (int i = 0; i < (size - 2); i++) 
