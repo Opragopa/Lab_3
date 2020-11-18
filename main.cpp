@@ -32,6 +32,12 @@ int main()
 		int sizeOfDynamic;
 		std::cout << "Size of dynamicArray = ";
 		std::cin >> sizeOfDynamic;
+		if (std::cin.fail())
+		{
+			std::cout << "Вы не ввесли количество элементов массива!\nПопробуйте снова.";
+		}
+		while (std::cin >> sizeOfDynamic)
+		{
 		int* dynamicArray = new int[sizeOfDynamic];
 		for (int i = 0; i < sizeOfDynamic; i++) 
 		{
@@ -40,6 +46,7 @@ int main()
 		}
 		std::cout << "\nAmount = " << sorting(dynamicArray, sizeOfDynamic) << "\n";
 		delete []dynamicArray;
+		}
 		//
 
 		std::cout << "\n";
